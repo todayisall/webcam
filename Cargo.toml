@@ -1,0 +1,38 @@
+[package]
+name = "webcam"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[dependencies]
+console_error_panic_hook = "0.1.6"
+serde = { version = "1.0.117", features = ["derive"] }
+serde_json = "1.0.59"
+wasm-bindgen = "0.2.78"
+wasm-bindgen-futures = "0.4.23"
+serde-wasm-bindgen = "0.4"
+
+js-sys = "0.3.51"
+web-sys = {version="0.3.61", features=[
+    "Window",
+    "Document",
+    "VideoTrack",
+    "HtmlMediaElement",
+    "HtmlVideoElement",
+    "HtmlSelectElement",
+    "Navigator",
+    "MediaStream",
+    "MediaDeviceInfo",
+    "MediaDeviceKind",
+    "MediaDevices",
+    "MediaStreamConstraints",
+    "Permissions",
+
+]}
+sycamore = {version="0.8.2", features=["serde","futures"]}
+sycamore-futures = "0.8.0"
+
+
+tracing = "0.1.25"
+tracing-wasm = "0.2.1"
+gloo-utils = "0.1.6"
